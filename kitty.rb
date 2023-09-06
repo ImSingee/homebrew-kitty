@@ -5,20 +5,20 @@
 class Kitty < Formula
   desc ""
   homepage ""
-  version "0.1.0-alpha.1"
+  version "0.1.0-alpha.2"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.1/kitty-0.1.0-alpha.1-darwin.amd64.tar.gz"
-      sha256 "133aa0ba67f580fda0871a889d3c9e150d86691adf0931d0077feef1ab5c1795"
+    if Hardware::CPU.arm?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-darwin.arm64.tar.gz"
+      sha256 "d10a7e062a59ae9653f8840804f14627bdc8cf5434cbfdd8458fd6c3e16d3830"
 
       def install
         bin.install "kitty"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.1/kitty-0.1.0-alpha.1-darwin.arm64.tar.gz"
-      sha256 "9f322768e1ba727c31f455aeef3d43f2417f46e1ee39521c3d4349be286688d0"
+    if Hardware::CPU.intel?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-darwin.amd64.tar.gz"
+      sha256 "fb7da9590eba86a04ec2a0af8a2b5ff235a17779778b807f8fb88bf0c5a9b2b1"
 
       def install
         bin.install "kitty"
@@ -27,17 +27,17 @@ class Kitty < Formula
   end
 
   on_linux do
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.1/kitty-0.1.0-alpha.1-linux.arm64.tar.gz"
-      sha256 "26cd84c1c7f20b8c960fc502086f795615654fb7d98a8010b01056bcc4cb0fbe"
+    if Hardware::CPU.intel?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-linux.amd64.tar.gz"
+      sha256 "706ecb18c175bfa4eec7a72745f00fd2ce8cc307fffcf665ecb0874459b3a9a3"
 
       def install
         bin.install "kitty"
       end
     end
-    if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.1/kitty-0.1.0-alpha.1-linux.amd64.tar.gz"
-      sha256 "dfc9b6d593119a9b2b0028adfcd0da0f30aa2f70d1a1f665d2e6ebec12616f0a"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-linux.arm64.tar.gz"
+      sha256 "2be14c6b4d7e9b3abd153fa0244011a2de28d078dc4817392e1fb16859fa9a40"
 
       def install
         bin.install "kitty"
