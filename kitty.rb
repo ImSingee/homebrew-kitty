@@ -5,20 +5,20 @@
 class Kitty < Formula
   desc ""
   homepage ""
-  version "0.1.0-alpha.2"
+  version "0.1.0-alpha.3"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-darwin.arm64.tar.gz"
-      sha256 "d10a7e062a59ae9653f8840804f14627bdc8cf5434cbfdd8458fd6c3e16d3830"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.3/kitty-0.1.0-alpha.3-darwin.arm64.tar.gz"
+      sha256 "4512c1da5de36f50e8d667289e220323d5a29cbcb7830516f7104991d2a43510"
 
       def install
         bin.install "kitty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-darwin.amd64.tar.gz"
-      sha256 "fb7da9590eba86a04ec2a0af8a2b5ff235a17779778b807f8fb88bf0c5a9b2b1"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.3/kitty-0.1.0-alpha.3-darwin.amd64.tar.gz"
+      sha256 "c556626392dcc3d9628fc0c9ee780cd7ec6a8f5b93b1e236b9e05effc8f61456"
 
       def install
         bin.install "kitty"
@@ -27,17 +27,17 @@ class Kitty < Formula
   end
 
   on_linux do
-    if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-linux.amd64.tar.gz"
-      sha256 "706ecb18c175bfa4eec7a72745f00fd2ce8cc307fffcf665ecb0874459b3a9a3"
+    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.3/kitty-0.1.0-alpha.3-linux.arm64.tar.gz"
+      sha256 "1cde34c19441fc10fb7f82dd721c51de86be795ecd2c10a96ac8e0220e14a389"
 
       def install
         bin.install "kitty"
       end
     end
-    if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.2/kitty-0.1.0-alpha.2-linux.arm64.tar.gz"
-      sha256 "2be14c6b4d7e9b3abd153fa0244011a2de28d078dc4817392e1fb16859fa9a40"
+    if Hardware::CPU.intel?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.3/kitty-0.1.0-alpha.3-linux.amd64.tar.gz"
+      sha256 "123ee00a93477cd8e5b6d8f4ad98cc6e4dafb5c650a8c4bbceafd9c6b15ae196"
 
       def install
         bin.install "kitty"
