@@ -5,20 +5,20 @@
 class Kitty < Formula
   desc ""
   homepage ""
-  version "0.1.0-alpha.4"
+  version "0.1.0-alpha.5"
 
   on_macos do
     if Hardware::CPU.arm?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.4/kitty-0.1.0-alpha.4-darwin.arm64.tar.gz"
-      sha256 "32905c4e1b9e730d9c242f117226488cbfb0a5cc3289d15c3d3953b2965e9077"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.5/kitty-0.1.0-alpha.5-darwin.arm64.tar.gz"
+      sha256 "6d60a3f2b2c795c284f655c34ec16594730f039fc0b590d5466c94f2f2c632e6"
 
       def install
         bin.install "kitty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.4/kitty-0.1.0-alpha.4-darwin.amd64.tar.gz"
-      sha256 "b16ee4c8470bdd1a41247542b07dc44970e0707a79e68f222cd6cf4d0e319597"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.5/kitty-0.1.0-alpha.5-darwin.amd64.tar.gz"
+      sha256 "fda9b07f1f6d5dc3fdbe2b7cb1c7c90f3143cc48677e1116d084c2bee47f5c26"
 
       def install
         bin.install "kitty"
@@ -28,16 +28,16 @@ class Kitty < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.4/kitty-0.1.0-alpha.4-linux.arm64.tar.gz"
-      sha256 "584de9630847d4ad6f6de8cf462f3b86ac43e9b235a6db67a6d286e13553bc22"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.5/kitty-0.1.0-alpha.5-linux.arm64.tar.gz"
+      sha256 "4fcb367f0a765d7f7a33518f4a205f11e4935ab241201a38abc600117597608f"
 
       def install
         bin.install "kitty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.4/kitty-0.1.0-alpha.4-linux.amd64.tar.gz"
-      sha256 "d97f0ebac53f5799d93cc6daa2be07fe98b2d0b4c9ce125510965a5e3a007fd1"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.5/kitty-0.1.0-alpha.5-linux.amd64.tar.gz"
+      sha256 "f1baa135cee5c45517ee2ba65fc0cbe3908634ddaf4f368ef08004b568db223a"
 
       def install
         bin.install "kitty"
