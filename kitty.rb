@@ -5,20 +5,20 @@
 class Kitty < Formula
   desc ""
   homepage ""
-  version "0.1.0-alpha.6"
+  version "0.1.0-alpha.7"
 
   on_macos do
-    if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.6/kitty-0.1.0-alpha.6-darwin.amd64.tar.gz"
-      sha256 "38ca6964d5007d1f7ca58067d67289082c6bb4c3be1788d129a14ac87c70da09"
+    if Hardware::CPU.arm?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.7/kitty-0.1.0-alpha.7-darwin.arm64.tar.gz"
+      sha256 "372e468b33963c92d707449084603a54fd275146544c4443c724ce1a84c9eb52"
 
       def install
         bin.install "kitty"
       end
     end
-    if Hardware::CPU.arm?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.6/kitty-0.1.0-alpha.6-darwin.arm64.tar.gz"
-      sha256 "8524d2446ecdb8246ec2dd45f63ecfb6d2dbdb43c4b1e9b37ad0569a0bd412a0"
+    if Hardware::CPU.intel?
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.7/kitty-0.1.0-alpha.7-darwin.amd64.tar.gz"
+      sha256 "f92ce9f6e2653833cf9830a7508a8e002caae0e6d0f7d72f48e15a43fa8093bb"
 
       def install
         bin.install "kitty"
@@ -28,16 +28,16 @@ class Kitty < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.6/kitty-0.1.0-alpha.6-linux.arm64.tar.gz"
-      sha256 "7c6468409cbd1f256af421bf0c5cb1d6c2dca0a79d7c2e01282e1f0258e8f813"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.7/kitty-0.1.0-alpha.7-linux.arm64.tar.gz"
+      sha256 "a23aaf5863269f527e170e6bfb3a5bc119a48533cb4c0250c07280637f63c4cb"
 
       def install
         bin.install "kitty"
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.6/kitty-0.1.0-alpha.6-linux.amd64.tar.gz"
-      sha256 "f26fcb3dd51f0a397a9f3ba5940dabbcf73ad0d1e25116ae77e8a6d30eaf2ac6"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.1.0-alpha.7/kitty-0.1.0-alpha.7-linux.amd64.tar.gz"
+      sha256 "f19808d1ecca3f957d1cb0821f576776a90b66a24bc1d4df05a2e786280ebb78"
 
       def install
         bin.install "kitty"
