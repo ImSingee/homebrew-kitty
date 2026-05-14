@@ -5,20 +5,20 @@
 class Kitty < Formula
   desc ""
   homepage ""
-  version "0.3.2"
+  version "0.4.0"
 
   on_macos do
     if Hardware::CPU.intel?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.3.2/kitty-0.3.2-darwin.amd64.tar.gz"
-      sha256 "bd649c96558a4049005b5c7f5abcc2419536ae79105620da8565f1c7b845a25a"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.4.0/kitty-0.4.0-darwin.amd64.tar.gz"
+      sha256 "bc1c3d4c8ca1215c1076b153efd037d8f61103835d51458425b91a03c01cc6b6"
 
       define_method(:install) do
         bin.install "kitty"
       end
     end
     if Hardware::CPU.arm?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.3.2/kitty-0.3.2-darwin.arm64.tar.gz"
-      sha256 "29106d2fe0af9504b0fa2dfd9fd8ee93080e646b8bbe696e40214e821b3dc4ab"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.4.0/kitty-0.4.0-darwin.arm64.tar.gz"
+      sha256 "2f9454b36ff6c43c46b2c7bfd2f85c282b4387dc3cf556c35441b35e3f9a19df"
 
       define_method(:install) do
         bin.install "kitty"
@@ -28,15 +28,15 @@ class Kitty < Formula
 
   on_linux do
     if Hardware::CPU.intel? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.3.2/kitty-0.3.2-linux.amd64.tar.gz"
-      sha256 "151353615656aadb0747fb58948db314201225fd019104294b01de5ec04601bd"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.4.0/kitty-0.4.0-linux.amd64.tar.gz"
+      sha256 "7edf6939b81c38302c4f1c69a51ba14ed3161a448d5585c42ec99d87c5d19544"
       define_method(:install) do
         bin.install "kitty"
       end
     end
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/ImSingee/kitty/releases/download/v0.3.2/kitty-0.3.2-linux.arm64.tar.gz"
-      sha256 "1154e5628aadebe0b821e195ce075722ce08846690c7ff77e4f2a63b3c9817d7"
+      url "https://github.com/ImSingee/kitty/releases/download/v0.4.0/kitty-0.4.0-linux.arm64.tar.gz"
+      sha256 "86fce7d231ac5c02ced9b01cef1c597d9c006623b9c2060f6c101a623e264b02"
       define_method(:install) do
         bin.install "kitty"
       end
